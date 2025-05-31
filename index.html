@@ -228,13 +228,19 @@
         body: JSON.stringify(data)
       });
 
-      form.style.display = "none";
-      confirmation.style.display = "block";
-      confirmation.scrollIntoView({ behavior: "smooth" });
+      // Réinitialiser le formulaire
+      form.reset();
 
+      // Afficher le message après délai simulé
       setTimeout(() => {
-        confirmation.style.display = "none";
-      }, 12000); // Attente de 12 secondes
+        form.style.display = "none";
+        confirmation.style.display = "block";
+        confirmation.scrollIntoView({ behavior: "smooth" });
+
+        setTimeout(() => {
+          confirmation.style.display = "none";
+        }, 10000); // Message visible 10 secondes
+      }, 3000); // Délai de simulation après soumission (3 secondes)
     });
   </script>
 
