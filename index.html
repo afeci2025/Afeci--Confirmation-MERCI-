@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>AFECI – Rapport des Assises</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eef4fc;
+      margin: 0;
+      padding: 0;
+      color: #003366;
+      text-align: center;
+    }
+
+    header {
+      padding: 10px;
+      background-color: #003366;
+      color: white;
+    }
+
+    .logo-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-circle img {
+      width: 80%;
+      border-radius: 50%;
+    }
+
+    h1 { font-size: 30px; margin: 0; }
+    h2, h3 { margin: 5px 0; font-weight: normal; }
+
+    .cover {
+      max-width: 240px;
+      border-radius: 10px;
+      margin: 15px auto;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .video-container {
+      max-width: 680px;
+      margin: 15px auto;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    }
+
+    form {
+      background-color: white;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 420px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      display: none;
+    }
+
+    form input, form select, form button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    form button {
+      background-color: #003366;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .confirmation {
+      display: none;
+      margin: 20px auto;
+      background: #dff0d8;
+      color: #3c763d;
+      padding: 15px;
+      max-width: 400px;
+      border-radius: 6px;
+    }
+
+    .confirmation a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #003366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .soutien {
+      background-color: white;
+      padding: 15px;
+      margin: 30px auto;
+      border-radius: 10px;
+      max-width: 440px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+
+    .soutien-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .soutien-icons a img {
+      height: 40px;
+      transition: transform 0.2s;
+    }
+
+    .soutien-icons a img:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      padding: 15px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-circle">
+      <img src="logo-afeci.png" alt="Logo AFECI">
+    </div>
+    <h1>RAPPORT</h1>
+    <h2>Les Assises de l’AFECI :</h2>
+    <h3>Vision et Perspectives</h3>
+  </header>
+
+  <img src="couverture-rapport.png" alt="Couverture du rapport" class="cover">
+
+  <div class="video-container">
+    <video id="introVideo" controls>
+      <source src="video-presentation-afeci.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas la vidéo.
+    </video>
+  </div>
+
+  <!-- FORMULAIRE -->
+  <form id="formulaire">
+    <h3>Formulaire d'accès au Rapport</h3>
+    <input type="text" name="nom" id="nom" placeholder="Nom" required>
+    <input type="text" name="prenom" id="prenom" placeholder="Prénom(s)" required>
+    <input type="text" name="contact" id="contact" placeholder="Téléphone" required>
+    <select name="statut" id="statut" required>
+      <option value="">-- Statut ou Qualité --</option>
+      <option value="Membre">Membre</option>
+      <option value="Ami">Ami</option>
+      <option value="Sympathisant">Sympathisant</option>
+      <option value="Partenaire">Partenaire</option>
+    </select>
+    <input type="email" name="email" id="email" placeholder="Adresse email (facultatif)">
+    <button type="submit">Soumettre et accéder au rapport</button>
+  </form>
+
+  <div class="confirmation" id="confirmation">
+    <h3>Merci !</h3>
+    <p>Votre enregistrement a été pris en compte.</p>
+    <a href="https://online.fliphtml5.com/oovlk/pmnx/" target="_blank">Accéder au Rapport</a>
+  </div>
+
+  <!-- SOUTIEN -->
+  <div class="soutien">
+    <h3>Soutenir l’AFECI</h3>
+    <p>Contribuez volontairement :</p>
+    <div class="soutien-icons">
+      <a href="https://wa.me/2250748636381?text=Bonjour,+je+souhaite+soutenir+l'AFECI+via+Orange+Money" target="_blank"><img src="orange-money.jpg" alt="Orange Money"></a>
+      <a href="https://wa.me/2250707013653?text=Bonjour,+je+souhaite+soutenir+l'AFECI+via+MTN+Money" target="_blank"><img src="mtn.jpg" alt="MTN Money"></a>
+      <a href="https://wa.me/2250707013653?text=Bonjour,+je+souhaite+soutenir+l'AFECI+via+Moov+Money" target="_blank"><img src="moov.jpg" alt="Moov Money"></a>
+      <a href="https://wa.me/2250747633537?text=Bonjour,+je+souhaite+soutenir+l'AFECI+via+Wave" target="_blank"><img src="wave.jpg" alt="Wave"></a>
+      <a href="https://wa.me/2250759965117?text=Bonjour,+j'ai+des+questions+concernant+l'AFECI" target="_blank"><img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp"></a>
+    </div>
+  </div>
+
+  <footer>
+    <p><strong>AFECI – Une Alliance, Un Héritage, Une Vision</strong></p>
+    <p>Contact : afecinational@gmail.com | Bouaké – Côte d’Ivoire</p>
+    <p>&copy; 2025 AFECI. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    const video = document.getElementById("introVideo");
+    const form = document.getElementById("formulaire");
+    const confirmation = document.getElementById("confirmation");
+
+    video.onended = () => {
+      form.style.display = "block";
+      form.scrollIntoView({ behavior: "smooth" });
+    };
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const data = {
+        nom: document.getElementById("nom").value.trim(),
+        prenom: document.getElementById("prenom").value.trim(),
+        contact: document.getElementById("contact").value.trim(),
+        statut: document.getElementById("statut").value,
+        email: document.getElementById("email").value.trim()
+      };
+
+      fetch("https://script.google.com/macros/s/AKfycbw4TgS0C0eFp_qTjkB9t6z1zKI6oBFXOpCwnVhjdKlFQLZTh_EYjcEtXS-H_AsilTQi/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      form.style.display = "none";
+      confirmation.style.display = "block";
+      confirmation.scrollIntoView({ behavior: "smooth" });
+
+      setTimeout(() => {
+        confirmation.style.display = "none";
+      }, 12000); // Attente de 12 secondes
+    });
+  </script>
+
+</body>
+</html>
